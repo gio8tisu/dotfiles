@@ -4,3 +4,5 @@ set showmode
 
 set surround
 set multiple-cursors
+set ideamarks
+set ideajoin
