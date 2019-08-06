@@ -6,3 +6,4 @@ set surround
 set multiple-cursors
 set ideamarks
 set ideajoin
+set clipboard+=ideaput
