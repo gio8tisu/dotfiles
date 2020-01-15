@@ -10,6 +10,7 @@ set relativenumber
 set splitright
 set splitbelow
 
+set ignorecase
 set smartcase
 set hlsearch
 set incsearch
