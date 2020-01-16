@@ -10,13 +10,14 @@ set relativenumber
 set splitright
 set splitbelow
 
+set ignorecase
 set smartcase
 set hlsearch
 set incsearch
 
 set mouse=a
 
-" python settings
+"python settings
 autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab
 
 "keymappings
@@ -27,3 +28,4 @@ let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 let g:netrw_browse_split = 4
 let g:netrw_winsize = 25
+let g:netrw_preview = 1
