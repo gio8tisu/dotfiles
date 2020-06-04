@@ -6,6 +6,7 @@ set autoindent
 
 set number
 set relativenumber
+nnoremap <C-n> :set rnu!<CR>
 
 set splitright
 set splitbelow
@@ -14,6 +15,11 @@ set ignorecase
 set smartcase
 set hlsearch
 set incsearch
+vnoremap <C-h> :nohlsearch<cr>
+nnoremap <C-h> :nohlsearch<cr>
+
+set undofile
+set undodir=~/.vim/undodir
 
 set mouse=a
 
