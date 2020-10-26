@@ -19,7 +19,7 @@ RUN cd /usr && \
     --enable-pythoninterp=yes \
     --enable-python3interp=yes \
     --prefix=/usr/local/ && \
-    make VIMRUNTIMEDIR=/usr/local/share/vim/vim81 && \
+    make VIMRUNTIMEDIR=/usr/local/share/vim/vim82 && \
     make install
 
 RUN cd /usr && \
@@ -30,6 +30,14 @@ RUN cd /usr && \
     make && \
     make install
 
-COPY vim/syntax.vim /usr/local/share/vim/vim81/syntax/syntax.vim
+COPY vim/syntax.vim /usr/local/share/vim/vim82/syntax/syntax.vim
+
+RUN git clone https://github.com/gio8tisu/dotfiles && \
+    cd dotfiles && \
+    git submodule update --init --recursive && \
+    ./install --only create && \
+    ./install --only link && \
+    cd vim/vim/pack/ycm-core/start/YouCompleteMe/ && \
+    python install.py
 
 CMD ["bash"]
