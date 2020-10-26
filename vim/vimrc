@@ -19,7 +19,7 @@ vnoremap <C-h> :nohlsearch<CR>
 nnoremap <C-h> :nohlsearch<CR>
 
 set undofile
-set undodir=~/.vim/undodir
+set undodir=~/.vim/undo-history
 
 set mouse=a
 
