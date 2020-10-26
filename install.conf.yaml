@@ -7,6 +7,9 @@
 - link:
     ~/.tmux.conf: tmux/tmux.conf
     ~/.vimrc: vim/vimrc
+    ~/.vim/:
+        path: vim/vim/*
+        glob: true
     ~/.ideavimrc: idea/ideavimrc
     ~/.bash_functions: bash/bash_functions
     ~/.bash_prompt: bash/bash_prompt
