@@ -1,5 +1,7 @@
 FROM python:3.7
 
+LABEL org.opencontainers.image.source https://github.com/gio8tisu/dotfiles
+
 RUN apt-get update && \
     apt-get install -y \
     g++ \
@@ -32,8 +34,8 @@ RUN cd /usr && \
 
 COPY vim/syntax.vim /usr/local/share/vim/vim82/syntax/syntax.vim
 
-RUN git clone https://github.com/gio8tisu/dotfiles && \
-    cd dotfiles && \
+COPY . dotfiles
+RUN cd dotfiles && \
     git submodule update --init --recursive && \
     ./install --only create && \
     ./install --only link && \
