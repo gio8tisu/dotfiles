@@ -19,7 +19,7 @@ vnoremap <C-h> :nohlsearch<CR>
 nnoremap <C-h> :nohlsearch<CR>
 
 set undofile
-set undodir=~/.vim/undodir
+set undodir=~/.vim/undo-history
 
 set mouse=a
 
@@ -42,6 +42,7 @@ let g:netrw_winsize = 25
 let g:netrw_preview = 1
 
 "colorscheme
+set background=dark
 colorscheme solarized
 
 "ultisnips
