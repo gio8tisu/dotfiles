@@ -24,14 +24,13 @@ for arg in get_args(t[3]):
 endsnippet
 
 snippet main "python main skeletton"
-import argparse
-
-
 def main(args):
     ${2:pass}
 
 
 if __name__ == "__main__":
+    import argparse
+
     parser = argparse.ArgumentParser()
     parser.add_argument("${1:arg}")
 
