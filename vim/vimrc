@@ -25,7 +25,7 @@ set undodir=~/.vim/undo-history
 set mouse=a
 
 "python settings
-autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab
+autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab commentstring=#\ %s
 
 "keymappings
 nnoremap Y y$

@@ -8,6 +8,9 @@
 [submodule "vim/vim/pack/tpope/start/surround"]
 	path = vim/vim/pack/tpope/start/surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "vim/vim/pack/tpope/start/commentary"]
+	path = vim/vim/pack/tpope/start/commentary
+	url = https://github.com/tpope/vim-commentary.git
 [submodule "vim/vim/pack/sirver/start/ultisnips"]
 	path = vim/vim/pack/sirver/start/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
