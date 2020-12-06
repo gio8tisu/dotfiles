@@ -27,6 +27,9 @@ set mouse=a
 "python settings
 autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab commentstring=#\ %s
 
+"Git commit settings
+autocmd FileType gitcommit setlocal tw=72
+
 "keymappings
 nnoremap Y y$
 " quicker window movement
