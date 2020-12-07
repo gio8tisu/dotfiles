@@ -23,7 +23,27 @@ for arg in get_args(t[3]):
   snip += f"self.{arg[0]} = {arg[0]}"`$0
 endsnippet
 
-snippet main "python main skeletton"
+snippet unittest "python unittest skeletton" b
+import unittest
+
+
+class Test$1(unittest.TestCase):
+    ${0:pass}
+
+
+if __name__ == "__main__":
+    unittest.main()
+endsnippet
+
+
+snippet test "python unittest case"
+def test_${1:method}_${2:scenario}_${3:expected}(self):
+    ${0:pass}
+
+endsnippet
+
+
+snippet main "python main skeletton" b
 import argparse
 
 
