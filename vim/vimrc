@@ -1,9 +1,12 @@
 set encoding=utf-8
 set nocompatible
 set wildmenu
+set ruler
 
 syntax on
+
 set autoindent
+nnoremap <C-i> :set autoindent!<CR>
 
 set number
 set relativenumber
