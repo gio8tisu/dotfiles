@@ -11,7 +11,6 @@
         path: vim/vim/*
         glob: true
     ~/.ideavimrc: idea/ideavimrc
-    ~/.bash_functions: bash/bash_functions
     ~/.bash_prompt: bash/bash_prompt
 
 - create:
