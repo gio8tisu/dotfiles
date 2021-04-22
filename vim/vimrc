@@ -28,7 +28,10 @@ set undodir=~/.vim/undo-history
 set mouse=a
 
 "python settings
-autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab
+autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab commentstring=#\ %s
+
+"Git commit settings
+autocmd FileType gitcommit setlocal tw=72
 
 "keymappings
 nnoremap Y y$
@@ -48,9 +51,13 @@ let g:netrw_preview = 1
 "colorscheme
 set background=dark
 colorscheme solarized
+so ~/.vim/autoload/togglebg.vim
 
 "ultisnips
 let g:UltiSnipsExpandTrigger="<C-s>"
 let g:UltiSnipsJumpForwardTrigger="<C-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
+
+"YouCompleteMe
+let g:ycm_autoclose_preview_window_after_insertion = 1
