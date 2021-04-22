@@ -51,6 +51,7 @@ let g:netrw_preview = 1
 "colorscheme
 set background=dark
 colorscheme solarized
+so ~/.vim/autoload/togglebg.vim
 
 "ultisnips
 let g:UltiSnipsExpandTrigger="<C-s>"
