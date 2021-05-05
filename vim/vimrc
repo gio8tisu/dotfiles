@@ -58,7 +58,7 @@ let g:netrw_winsize = 25
 let g:netrw_preview = 1
 
 "colorscheme
-set background=dark
+set background=light
 colorscheme solarized
 so ~/.vim/autoload/togglebg.vim
 
