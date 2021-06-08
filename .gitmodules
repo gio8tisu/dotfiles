@@ -17,3 +17,6 @@
 [submodule "vim/vim/pack/ycm-core/start/YouCompleteMe"]
 	path = vim/vim/pack/ycm-core/start/YouCompleteMe
 	url = https://github.com/ycm-core/YouCompleteMe.git
+[submodule "vim/vim/pack/junegunn/start/fzf.vim"]
+	path = vim/vim/pack/junegunn/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
