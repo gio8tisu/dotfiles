@@ -20,3 +20,9 @@
 [submodule "vim/vim/pack/junegunn/start/fzf.vim"]
 	path = vim/vim/pack/junegunn/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
+[submodule "vim/vim/pack/chaoren/start/vim-wordmotion"]
+	path = vim/vim/pack/chaoren/start/vim-wordmotion
+	url = https://github.com/chaoren/vim-wordmotion.git
+[submodule "vim/vim/pack/tpope/start/vim-abolish"]
+	path = vim/vim/pack/tpope/start/vim-abolish
+	url = https://github.com/tpope/vim-abolish.git
