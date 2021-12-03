@@ -12,7 +12,10 @@ RUN apt-get update && \
     python3-dev \
     git && \
     neovim && \
-    python3-neovim && \
+    python3-neovim
+
+RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | -E bash - \ &&
+    apt-get install -y nodejs && \
     apt-get clean
 
 RUN sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
