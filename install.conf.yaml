@@ -7,7 +7,11 @@
 - link:
     ~/.tmux.conf: tmux/tmux.conf
     ~/.vimrc: vim/vimrc
+    ~/.config/nvim/init.vim: vim/vimrc
     ~/.vim/:
+        path: vim/vim/*
+        glob: true
+    ~/.config/nvim/:
         path: vim/vim/*
         glob: true
     ~/.ideavimrc: idea/ideavimrc
@@ -18,4 +22,3 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-
