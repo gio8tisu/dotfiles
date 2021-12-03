@@ -11,35 +11,14 @@ RUN apt-get update && \
     libcairo2-dev \
     python3-dev \
     git && \
+    neovim && \
+    python3-neovim && \
     apt-get clean
 
-RUN cd /usr && \
-    git clone https://github.com/vim/vim.git && \
-    cd vim && \
-    ./configure --with-features=huge \
-    --enable-multibyte \
-    --enable-pythoninterp=yes \
-    --enable-python3interp=yes \
-    --prefix=/usr/local/ && \
-    make VIMRUNTIMEDIR=/usr/local/share/vim/vim82 && \
-    make install
+RUN sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-RUN cd /usr && \
-    wget https://github.com/Kitware/CMake/releases/download/v3.19.0-rc1/cmake-3.19.0-rc1.tar.gz  && \
-    tar xzf cmake-3.19.0-rc1.tar.gz && \
-    cd cmake-3.19.0-rc1 && \
-    ./bootstrap && \
-    make && \
-    make install
-
-COPY vim/syntax.vim /usr/local/share/vim/vim82/syntax/syntax.vim
 
 COPY . dotfiles
-RUN cd dotfiles && \
-    git submodule update --init --recursive && \
-    ./install --only create && \
-    ./install --only link && \
-    cd vim/vim/pack/ycm-core/start/YouCompleteMe/ && \
-    python install.py
 
 CMD ["bash"]
