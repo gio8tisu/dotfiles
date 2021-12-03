@@ -73,3 +73,19 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 
 "fzf
 set rtp+=~/.fzf
+
+"vim-plug
+call plug#begin('~/.vim/plugged')
+
+Plug 'SirVer/ultisnips'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-abolish'
+Plug 'chaoren/vim-wordmotion'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Initialize plugin system
+call plug#end()
