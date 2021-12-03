@@ -2,27 +2,3 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "vim/vim/pack/tpope/start/fugitive"]
-	path = vim/vim/pack/tpope/start/fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule "vim/vim/pack/tpope/start/surround"]
-	path = vim/vim/pack/tpope/start/surround
-	url = https://github.com/tpope/vim-surround.git
-[submodule "vim/vim/pack/tpope/start/commentary"]
-	path = vim/vim/pack/tpope/start/commentary
-	url = https://github.com/tpope/vim-commentary.git
-[submodule "vim/vim/pack/sirver/start/ultisnips"]
-	path = vim/vim/pack/sirver/start/ultisnips
-	url = https://github.com/SirVer/ultisnips.git
-[submodule "vim/vim/pack/ycm-core/start/YouCompleteMe"]
-	path = vim/vim/pack/ycm-core/start/YouCompleteMe
-	url = https://github.com/ycm-core/YouCompleteMe.git
-[submodule "vim/vim/pack/junegunn/start/fzf.vim"]
-	path = vim/vim/pack/junegunn/start/fzf.vim
-	url = https://github.com/junegunn/fzf.vim.git
-[submodule "vim/vim/pack/chaoren/start/vim-wordmotion"]
-	path = vim/vim/pack/chaoren/start/vim-wordmotion
-	url = https://github.com/chaoren/vim-wordmotion.git
-[submodule "vim/vim/pack/tpope/start/vim-abolish"]
-	path = vim/vim/pack/tpope/start/vim-abolish
-	url = https://github.com/tpope/vim-abolish.git
