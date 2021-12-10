@@ -20,13 +20,13 @@ RUN sh -c 'curl -fLo nvim.appimage https://github.com/neovim/neovim/releases/dow
 RUN sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-RUN pip3 install pynvim && \
+RUN pip3 install --no-cache-dir dotbot pynvim && \
     npm install -g neovim
 
 COPY . /root/.dotfiles
+RUN mkdir -p /root/.config/nvim
 
-RUN mkdir -p /root/.config/nvim && \
-    /root/.dotfiles/install
+RUN dotbot -c /root/.dotfiles/install.conf.yaml
 
 RUN nvim --headless +PlugInstall +qa && \
     nvim --headless +CocInstall coc-tsserver +CocInstall coc-snippets +CocInstall coc-pyright +qa
