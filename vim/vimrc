@@ -27,6 +27,9 @@ set undodir=~/.vim/undo-history
 
 set mouse=a
 
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+noremap <F6> :set list!<CR>
+
 "python settings
 autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab commentstring=#\ %s
 
