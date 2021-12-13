@@ -4,6 +4,9 @@
 
 - clean: ['~']
 
+- create:
+    - ~/.vim/undo-history
+
 - link:
     ~/.tmux.conf: tmux/tmux.conf
     ~/.vimrc: vim/vimrc
@@ -16,9 +19,3 @@
         glob: true
     ~/.ideavimrc: idea/ideavimrc
     ~/.bash_prompt: bash/bash_prompt
-
-- create:
-    - ~/.vim/undo-history
-
-- shell:
-  - [git submodule update --init --recursive, Installing submodules]
