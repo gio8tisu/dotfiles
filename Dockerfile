@@ -7,7 +7,8 @@ RUN apt update && \
     git \
     curl \
     tmux \
-    python3-dev
+    python3-dev \
+    python3-pip
 
 RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && \
     apt install -y nodejs && apt clean
@@ -19,6 +20,15 @@ RUN sh -c 'curl -fLo nvim.appimage https://github.com/neovim/neovim/releases/dow
 RUN sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
+RUN pip3 install --no-cache-dir dotbot pynvim && \
+    npm install -g neovim
+
 COPY . /root/.dotfiles
+RUN mkdir -p /root/.config/nvim
+
+RUN dotbot -c /root/.dotfiles/install.conf.yaml
+
+RUN nvim --headless +PlugInstall +qa && \
+    nvim --headless +CocInstall coc-tsserver +CocInstall coc-snippets +CocInstall coc-pyright +qa
 
 CMD ["bash"]
