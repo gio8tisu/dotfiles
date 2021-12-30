@@ -3,7 +3,7 @@ set nocompatible
 set wildmenu
 set ruler
 
-syntax on
+syntax enable
 
 set autoindent
 nnoremap <C-i> :set autoindent!<CR>
@@ -29,6 +29,20 @@ set mouse=a
 
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 noremap <F6> :set list!<CR>
+
+set hidden
+set signcolumn=yes
+set scrolloff=8
+set sidescrolloff=8
+set nowrap
+let mapleader = "\<space>"
+
+nmap <leader>Q :bufdo bdelete<CR>
+map gf :edit <cfile><CR>
+nmap <leader>f :Files<CR>
+nmap <leader>F :GFiles<CR>
+nmap <leader>b :Buffers<CR>
+nmap <leader>rn <Plug>(coc-rename)
 
 "python settings
 autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab commentstring=#\ %s
@@ -64,6 +78,10 @@ let g:netrw_preview = 1
 set background=light
 colorscheme solarized
 so ~/.vim/autoload/togglebg.vim
+" Workaround a problem with solarized and vim-gitgutter.
+" https://github.com/airblade/vim-gitgutter/issues/696
+highlight! link SignColumn LineNr
+autocmd ColorScheme * highlight! link SignColumn LineNr
 
 "ultisnips
 let g:UltiSnipsExpandTrigger="<C-s>"
@@ -127,6 +145,8 @@ Plug 'chaoren/vim-wordmotion'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tpope/vim-repeat'
+Plug 'airblade/vim-gitgutter'
 
 " Initialize plugin system
 call plug#end()
