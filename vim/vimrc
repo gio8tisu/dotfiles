@@ -42,7 +42,6 @@ map gf :edit <cfile><CR>
 nmap <leader>f :Files<CR>
 nmap <leader>F :GFiles<CR>
 nmap <leader>b :Buffers<CR>
-nmap <leader>rn <Plug>(coc-rename)
 
 "python settings
 autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab commentstring=#\ %s
@@ -131,6 +130,11 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
+
+nmap <leader>rn <Plug>(coc-rename)
+nmap <leader>a :CocAction<CR>
+imap <silent> <M-.> <Plug>(copilot-next)
+imap <silent> <M-,> <Plug>(copilot-previous)
 
 "vim-plug
 call plug#begin('~/.vim/plugged')
