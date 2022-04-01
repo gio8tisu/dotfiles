@@ -146,6 +146,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-repeat'
 Plug 'airblade/vim-gitgutter'
+Plug 'github/copilot.vim'
 
 " Initialize plugin system
 call plug#end()
