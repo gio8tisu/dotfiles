@@ -19,3 +19,4 @@
         glob: true
     ~/.ideavimrc: idea/ideavimrc
     ~/.bash_prompt: bash/bash_prompt
+    ~/.bashrc: bash/bashrc
