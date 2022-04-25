@@ -124,7 +124,7 @@ if [ -f ~/.bash_prompt ]; then
     . ~/.bash_prompt
 fi
 
-export EDITOR=/home/sgarcia/.local/bin/nvim
+export EDITOR=nvim
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
