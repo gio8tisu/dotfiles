@@ -6,7 +6,7 @@ set ruler
 syntax enable
 
 set autoindent
-nnoremap <C-i> :set autoindent!<CR>
+nnoremap <C-i> :set paste!<CR>
 
 set number
 set relativenumber
@@ -135,6 +135,8 @@ nmap <leader>a :CocAction<CR>
 imap <silent> <M-.> <Plug>(copilot-next)
 imap <silent> <M-,> <Plug>(copilot-previous)
 
+let g:AutoPairsFlyMode = 1
+
 "vim-plug
 call plug#begin('~/.vim/plugged')
 
@@ -144,7 +146,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
 Plug 'chaoren/vim-wordmotion'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-repeat'
@@ -154,6 +156,7 @@ Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
 Plug 'fannheyward/coc-pyright', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
+Plug 'jiangmiao/auto-pairs'
 
 " Initialize plugin system
 call plug#end()
