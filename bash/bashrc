@@ -138,3 +138,4 @@ NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 alias vi=nvim
 
 export FZF_DEFAULT_COMMAND='find .'
+export TZ=Europe/Madrid
