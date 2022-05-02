@@ -136,6 +136,8 @@ nmap <leader>a :CocAction<CR>
 imap <silent> <M-.> <Plug>(copilot-next)
 imap <silent> <M-,> <Plug>(copilot-previous)
 
+let g:AutoPairsFlyMode = 1
+
 "vim-plug
 call plug#begin('~/.vim/plugged')
 
@@ -155,6 +157,7 @@ Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
 Plug 'fannheyward/coc-pyright', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
+Plug 'jiangmiao/auto-pairs'
 
 " Initialize plugin system
 call plug#end()
