@@ -138,6 +138,9 @@ imap <silent> <M-,> <Plug>(copilot-previous)
 
 let g:AutoPairsFlyMode = 1
 
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+au FileType gitcommit let b:EditorConfig_disable = 1
+
 "vim-plug
 call plug#begin('~/.vim/plugged')
 
@@ -158,6 +161,7 @@ Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
 Plug 'fannheyward/coc-pyright', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
 Plug 'jiangmiao/auto-pairs'
+Plug 'editorconfig/editorconfig-vim'
 
 " Initialize plugin system
 call plug#end()
