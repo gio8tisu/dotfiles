@@ -19,6 +19,7 @@
         glob: true
     ~/.ideavimrc: idea/ideavimrc
     ~/.bash_prompt: bash/bash_prompt
+    ~/.bash_aliases: bash/bash_aliases
     ~/.bashrc:
       path: bash/bashrc
       force: true
