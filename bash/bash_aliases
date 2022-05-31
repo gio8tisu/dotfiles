@@ -1,0 +1,6 @@
+alias ll='ls -alF'
+alias l='ls -CF'
+
+alias vi=nvim
+
+alias fvi='fzf | xargs nvim'

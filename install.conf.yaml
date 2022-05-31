@@ -19,5 +19,6 @@
         glob: true
     ~/.ideavimrc: idea/ideavimrc
     ~/.bash_prompt: bash/bash_prompt
+    ~/.bash_aliases: bash/bash_aliases
     ~/.bash_functions: bash/bash_functions
     ~/.gitconfig: git/gitconfig
