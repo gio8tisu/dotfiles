@@ -23,4 +23,5 @@
     ~/.bashrc:
       path: bash/bashrc
       force: true
+    ~/.bash_functions: bash/bash_functions
     ~/.gitconfig: git/gitconfig
