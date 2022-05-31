@@ -3,4 +3,4 @@ alias l='ls -CF'
 
 alias vi=nvim
 
-alias vifzf='fzf | xargs nvim'
+alias fvi='fzf | xargs nvim'
