@@ -1,6 +1,7 @@
-alias ll='ls -alF'
+# ls aliases
+alias ll='ls -lFh'
+alias la='ls -AlFh'
 alias l='ls -CF'
 
 alias vi=nvim
-
 alias fvi='fzf | xargs nvim'
