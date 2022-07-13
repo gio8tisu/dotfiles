@@ -1,0 +1,108 @@
+snippet template "template document"
+\documentclass[10pt,a4paper]{article}
+
+\title{${1:title}}
+
+\author{${2:author}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+${3:abstract}
+\end{abstract}
+
+\section{${4:section}}
+$0
+%\bibliographystyle{plainurl}
+%\bibliography{paper}
+
+\end{document}
+endsnippet
+
+snippet "b(egin)?" "begin{} / end{}"
+\begin{${1:something}}
+	${0:${VISUAL}}
+\end{$1}
+endsnippet
+
+snippet usepac "usepackage"
+\usepackage[${1:options}]{${2:package}} ${3}
+endsnippet
+
+snippet ]i "]i"
+\item ${1}
+${2:]i}
+endsnippet
+
+snippet sec "Section" b
+\section{${1:section name}}
+\label{sec:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+${0}
+endsnippet
+
+snippet sub "Subsection" b
+\subsection{${1:subsection name}}
+\label{sub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+${0}
+endsnippet
+
+snippet ssub "Subsubsection" b
+\subsubsection{${1:subsubsection name}}
+\label{ssub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+${0}
+endsnippet
+
+snippet cite "citation"
+\cite{${1:reference}}
+endsnippet
+
+snippet it "it"
+\textit{${1:text}}
+endsnippet
+
+snippet bf "bf"
+\textbf{${1:text}}
+endsnippet
+
+snippet under "under"
+\underline{${1:text}}
+endsnippet
+
+snippet emp "emp"
+\emph{${1:text}}
+endsnippet
+
+snippet figure "figure"
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{$1}
+	\caption{$2}
+	\label{fig:${3:$1}}
+\end{figure}
+endsnippet
+
+snippet subfigure "subfigure"
+\begin{figure}
+	\centering
+	\begin{subfigure}[h]{0.8\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{$1}
+		\caption{$2}
+		\label{fig:${3:$1}}
+	\end{subfigure}
+
+	\begin{subfigure}[h]{0.8\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{$4}
+		\caption{$5}
+		\label{fig:${6:$4}}
+	\end{subfigure}
+	\caption{$7}
+	\label{fig:$8}
+\end{figure}
+
+endsnippet
