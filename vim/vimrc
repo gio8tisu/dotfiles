@@ -19,8 +19,8 @@ set ignorecase
 set smartcase
 set hlsearch
 set incsearch
-vnoremap <C-h> :nohlsearch<CR>
-nnoremap <C-h> :nohlsearch<CR>
+vnoremap <C-h> :set hlsearch!<CR>
+nnoremap <C-h> :set hlsearch!<CR>
 
 set undofile
 set undodir=~/.vim/undo-history
