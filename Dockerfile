@@ -1,4 +1,23 @@
-FROM ubuntu:18.04
+FROM ubuntu:18.04 as neovim-builder
+
+RUN apt update && \
+    apt install -y \
+    git \
+    gettext \
+    libtool \
+    libtool-bin \
+    autoconf \
+    automake \
+    cmake \
+    g++ \
+    pkg-config \
+    unzip \
+    curl \
+    doxygen
+RUN git clone https://github.com/neovim/neovim
+RUN cd neovim && git checkout nightly && make CMAKE_BUILD_TYPE=RelWithDebInfo
+
+FROM ubuntu:18.04 as final
 
 LABEL org.opencontainers.image.source https://github.com/gio8tisu/dotfiles
 
@@ -8,14 +27,15 @@ RUN apt update && \
     curl \
     tmux \
     python3-dev \
-    python3-pip
+    python3-pip \
+    cmake \
+    bash-completion
 
 RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && \
     apt install -y nodejs && apt clean
 
-RUN sh -c 'curl -fLo nvim.appimage https://github.com/neovim/neovim/releases/download/v0.6.0/nvim.appimage' && \
-    chmod u+x nvim.appimage && ./nvim.appimage --appimage-extract && \
-    ln -s /squashfs-root/AppRun /usr/bin/nvim
+COPY --from=neovim-builder /neovim /neovim
+RUN cd /neovim && make install
 
 RUN sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -25,10 +45,6 @@ RUN pip3 install --no-cache-dir dotbot pynvim && \
 
 COPY . /root/.dotfiles
 RUN mkdir -p /root/.config/nvim
-
 RUN dotbot -c /root/.dotfiles/install.conf.yaml
-
-RUN nvim --headless +PlugInstall +qa && \
-    nvim --headless +CocInstall coc-tsserver +CocInstall coc-snippets +CocInstall coc-pyright +qa
 
 CMD ["bash"]
