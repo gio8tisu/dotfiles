@@ -6,6 +6,8 @@
 
 - create:
     - ~/.vim/undo-history
+    - ~/.config/nvim
+    - ~/.config/kitty
 
 - link:
     ~/.tmux.conf: tmux/tmux.conf
@@ -16,6 +18,9 @@
         glob: true
     ~/.config/nvim/:
         path: vim/vim/*
+        glob: true
+    ~/.config/kitty/:
+        path: kitty/*
         glob: true
     ~/.ideavimrc: idea/ideavimrc
     ~/.bash_prompt: bash/bash_prompt
