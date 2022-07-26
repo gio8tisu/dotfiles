@@ -132,6 +132,8 @@ let g:AutoPairsFlyMode = 1
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 au FileType gitcommit let b:EditorConfig_disable = 1
 
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+
 "vim-plug
 call plug#begin('~/.vim/plugged')
 
