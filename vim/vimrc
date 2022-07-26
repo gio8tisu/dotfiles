@@ -73,23 +73,11 @@ let g:netrw_browse_split = 4
 let g:netrw_winsize = 25
 let g:netrw_preview = 1
 
-"colorscheme
-set background=light
-colorscheme solarized
-so ~/.vim/autoload/togglebg.vim
-" Workaround a problem with solarized and vim-gitgutter.
-" https://github.com/airblade/vim-gitgutter/issues/696
-highlight! link SignColumn LineNr
-autocmd ColorScheme * highlight! link SignColumn LineNr
-
 "ultisnips
 let g:UltiSnipsExpandTrigger="<c-s>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsEditSplit="vertical"
-
-"YouCompleteMe
-let g:ycm_autoclose_preview_window_after_insertion = 1
 
 "fzf
 set rtp+=~/.fzf
@@ -167,6 +155,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'unblevable/quick-scope'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 " Initialize plugin system
 call plug#end()
@@ -183,3 +172,8 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 EOF
+"
+"colorscheme
+set background=light
+colorscheme tokyonight
+so ~/.vim/autoload/togglebg.vim
