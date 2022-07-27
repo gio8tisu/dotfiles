@@ -185,3 +185,8 @@ augroup END
 set background=dark
 colorscheme tokyonight
 so ~/.vim/autoload/togglebg.vim
+
+"tree-sitter folding
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+autocmd BufReadPost,FileReadPost * normal zR
