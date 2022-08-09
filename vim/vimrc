@@ -39,9 +39,9 @@ let mapleader = "\<space>"
 
 nmap <leader>Q :bufdo bdelete<CR>
 map gf :edit <cfile><CR>
-nmap <leader>f :Files<CR>
-nmap <leader>F :GFiles<CR>
-nmap <leader>b :Buffers<CR>
+nmap <leader>ff :Files<CR>
+nmap <leader>fg :GFiles<CR>
+nmap <leader>fb :Buffers<CR>
 
 "python settings
 autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab commentstring=#\ %s
