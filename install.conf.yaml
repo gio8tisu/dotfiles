@@ -8,6 +8,7 @@
     - ~/.vim/undo-history
     - ~/.config/nvim
     - ~/.config/kitty
+    - ~/.config/i3
 
 - link:
     ~/.tmux.conf: tmux/tmux.conf
@@ -22,6 +23,7 @@
     ~/.config/kitty/:
         path: kitty/*
         glob: true
+    ~/.config/i3/config: i3/config
     ~/.ideavimrc: idea/ideavimrc
     ~/.bash_prompt: bash/bash_prompt
     ~/.bash_aliases: bash/bash_aliases
