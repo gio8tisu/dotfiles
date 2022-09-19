@@ -73,7 +73,7 @@ DOUBLE_QUOTES = '"'
 class Arg(object):
 	def __init__(self, arg):
 		self.arg = arg
-		self.name = arg.split('=')[0].strip()
+		self.name = arg.split('=')[0].strip().split(':')[0].strip()
 	def __str__(self):
 		return self.name
 	def __unicode__(self):
@@ -191,13 +191,7 @@ def write_numpy_docstring_args(args, snip):
 		for kwarg in kwargs:
 			snip += format_arg(kwarg, NUMPY) + ', optional'
 	snip.rv += '\n' + snip.mkline('', indent='')
-def write_init_body(args, parents, snip):
-	parents = [p.strip() for p in parents.split(",")]
-	parents = [p for p in parents if p != 'object']
-	for p in parents:
-		snip += p + ".__init__(self)"
-	if parents:
-		snip.rv += '\n' + snip.mkline('', indent='')
+def write_init_body(args, snip):
 	for arg in args:
 		snip += "self.%s = %s" % (arg, arg)
 def write_slots_args(args, snip):
@@ -226,7 +220,7 @@ def write_function_docstring(t, snip):
 endglobal
 
 snippet cl(ass) "class with docstrings" b
-class ${1:MyClass}(${2:object}):
+class ${1:MyClass}:
 	`!p snip.rv = triple_quotes(snip)`${3:Docstring for $1.}`!p
 if "\n" in t[3]:
 	snip >> 1
@@ -243,7 +237,7 @@ write_docstring_args(args, snip)
 if args:
 	snip.rv += snip.mkline('', indent='')
 	snip += '{0}'.format(triple_quotes(snip))
-write_init_body(args, t[2], snip)
+write_init_body(args, snip)
 `
 		$0
 endsnippet
