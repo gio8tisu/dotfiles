@@ -84,8 +84,6 @@ let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsEditSplit="vertical"
 
-"fzf
-set rtp+=~/.fzf
 
 "CoC
 " Use tab for trigger completion with characters ahead and navigate.
@@ -148,7 +146,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
 Plug 'chaoren/vim-wordmotion'
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-repeat'
