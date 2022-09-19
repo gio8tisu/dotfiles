@@ -63,6 +63,8 @@ nnoremap Y y$
 nnoremap d} dV}
 nnoremap <leader>o o<esc>
 nnoremap <leader>O O<esc>
+inoremap <C-s> <C-O>:update<CR>
+nnoremap <C-s> :update<CR>
 " quicker window movement
 nnoremap <M-j> <C-w>j
 nnoremap <M-k> <C-w>k
