@@ -60,6 +60,7 @@ autocmd FileType gitcommit setlocal tw=72
 
 "keymappings
 nnoremap Y y$
+nnoremap d} dV}
 " quicker window movement
 nnoremap <M-j> <C-w>j
 nnoremap <M-k> <C-w>k
