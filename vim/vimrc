@@ -6,7 +6,7 @@ set ruler
 syntax enable
 
 set autoindent
-nnoremap <C-i> :set paste!<CR>
+nnoremap <C-p> :set paste!<CR>
 
 set number
 set relativenumber
