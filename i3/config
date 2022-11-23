@@ -146,40 +146,21 @@ bindsym $mod+Shift+r restart
 # bindsym $mod+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+set $mode_resize Wider (w), Narrower (n), Taller (t), Shorter (s)
+mode "$mode_resize" {
+        bindsym w resize grow   width  5 px or 5 ppt
+        bindsym n resize shrink width  5 px or 5 ppt
+        bindsym t resize grow   height 5 px or 5 ppt
+        bindsym s resize shrink height 5 px or 5 ppt
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-	# Combine with shift for larger steps.
-        bindsym $left resize shrink width 5 px or 5 ppt
-        bindsym $down resize grow height  5 px or 5 ppt
-        bindsym $up resize shrink height  5 px or 5 ppt
-        bindsym $right resize grow width  5 px or 5 ppt
+        bindsym Control+w resize grow   width  10 px or 10 ppt
+        bindsym Control+n resize shrink width  10 px or 10 ppt
+        bindsym Control+t resize grow   height 10 px or 10 ppt
+        bindsym Control+s resize shrink height 10 px or 10 ppt
 
-        bindsym Shift+$left resize shrink width 10 px or 10 ppt
-        bindsym Shift+$down resize grow height  10 px or 10 ppt
-        bindsym Shift+$up resize shrink height  10 px or 10 ppt
-        bindsym Shift+$right resize grow width  10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width  5 px or 5 ppt
-        bindsym Up resize grow height     5 px or 5 ppt
-        bindsym Down resize shrink height 5 px or 5 ppt
-        bindsym Right resize grow width   5 px or 5 ppt
-
-        bindsym Shift+Left resize shrink width  10 px or 10 ppt
-        bindsym Shift+Up resize grow height     10 px or 10 ppt
-        bindsym Shift+Down resize shrink height 10 px or 10 ppt
-        bindsym Shift+Right resize grow width   10 px or 10 ppt
-
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode "$mode_resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -206,7 +187,7 @@ focus_follows_mouse no
 bindsym $mod+F1 move workspace to output left
 bindsym $mod+F2 move workspace to output right
 
-bindsym $mod+z exec --no-startup-id i3zen --workspace zen
+bindsym $mod+z exec --no-startup-id i3zen --workspace zen --height 90 --width 90
 
 # System mode (lock, logout, etc.)
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
@@ -218,8 +199,6 @@ mode "$mode_system" {
         bindsym r exec --no-startup-id i3exit reboot, mode "default"
         bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
 
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
         bindsym Escape mode "default"
 }
 bindsym $mod+shift+x mode "$mode_system"
