@@ -5,3 +5,6 @@ alias l='ls -CF'
 
 alias vi=nvim
 alias fvi='fzf | xargs nvim'
+
+alias just="just --unstable --chooser='gum choose'"
+alias j="just "
