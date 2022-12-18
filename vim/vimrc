@@ -60,8 +60,12 @@ autocmd FileType gitcommit setlocal tw=72
 
 "keymappings
 nnoremap Y y$
+nnoremap y} yV}
 nnoremap d} dV}
 nnoremap c} cV}
+nnoremap y{ yV{
+nnoremap d{ dV{
+nnoremap c{ cV{
 nnoremap <leader>o o<esc>
 nnoremap <leader>O O<esc>
 inoremap <C-s> <C-O>:update<CR>
