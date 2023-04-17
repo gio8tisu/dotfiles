@@ -27,3 +27,6 @@
 	gpgsign = true
 [gpg]
 	format = ssh
+[pull]
+	rebase = true
+	autoStash = true
