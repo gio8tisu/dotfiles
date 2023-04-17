@@ -7,6 +7,7 @@
 - create:
     - ~/.vim/undo-history
     - ~/.config/nvim
+    - ~/.config/nvim/undodir
     - ~/.config/kitty
     - ~/.config/i3
     - ~/.config/polybar
@@ -29,6 +30,8 @@
         glob: true
     ~/.config/polybar/:
         path: polybar/*
+    ~/.config/nvim/:
+        path: neovim/*
         glob: true
     ~/.ideavimrc: idea/ideavimrc
     ~/.bash_prompt: bash/bash_prompt
