@@ -9,6 +9,8 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+include catppuccin
+
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -26,14 +28,12 @@ exec --no-startup-id dex --autostart --environment i3
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
-
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym Shift+XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
@@ -102,6 +102,7 @@ bindsym $mod+s split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
+workspace_layout tabbed
 bindsym $mod+Shift+s layout stacking
 bindsym $mod+Shift+w layout tabbed
 bindsym $mod+Shift+e layout toggle split
@@ -167,9 +168,7 @@ bindsym $mod+r mode "$mode_resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-}
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 bindsym $mod+x [urgent=latest] focus
 
@@ -187,8 +186,8 @@ for_window [class="feh"] floating enable
 
 focus_follows_mouse no
 
-bindsym $mod+F1 move workspace to output left
-bindsym $mod+F2 move workspace to output right
+bindsym $mod+F1 move workspace to output primary
+bindsym $mod+F2 move workspace to output nonprimary
 
 bindsym $mod+z exec --no-startup-id i3zen --workspace zen --height 90 --width 90
 
@@ -215,3 +214,16 @@ for_window [all] title_window_icon padding 3px
 bindsym $mod+m exec i3-input -F 'mark --toggle %s' -l 1 -P 'Mark: '
 # read 1 character and go to the window with the character
 bindsym $mod+g exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Goto: '
+
+gaps inner 5px
+gaps outer 5px
+workspace 1 gaps inner 0
+workspace 1 gaps outer 0
+smart_gaps inverse_outer
+
+# Escape mode: Useful to send "normal" F1-4 keys (as they are mapped in default mode).
+set $mode_escape Escape mode
+bindsym $mod+Escape mode "$mode_escape"
+mode "$mode_escape" {
+    bindsym $mod+Escape mode "default"
+}

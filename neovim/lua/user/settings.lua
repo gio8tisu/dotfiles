@@ -1,0 +1,34 @@
+local set = vim.opt
+
+set.autoindent = true
+set.number = true
+set.relativenumber = true
+set.tabstop = 4
+set.softtabstop = 4
+set.shiftwidth = 4
+set.expandtab = true
+set.smartindent = true
+set.splitbelow = true
+set.splitright = true
+set.ignorecase = true
+set.smartcase = true
+set.hlsearch = false
+set.incsearch = true
+set.swapfile = false
+set.backup = false
+set.undodir = vim.fn.stdpath('config') .. '/undodir'
+set.undofile = true
+set.mouse = 'a'
+set.listchars = { eol = "¬" , tab = ">·" , trail = "~" , extends = ">" , precedes = "<" , space = "␣"}
+set.hidden = true
+set.signcolumn = "yes"
+set.scrolloff = 8
+set.sidescrolloff = 8
+set.wrap = false
+set.foldmethod = "expr"
+set.foldexpr = "nvim_treesitter#foldexpr()"
+set.foldlevel = 99
+set.cursorline = true
+set.termguicolors = true
+vim.g.mapleader = " "
+vim.g.python3_host_prog = "/usr/bin/python3"

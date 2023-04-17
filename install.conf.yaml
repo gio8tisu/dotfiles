@@ -5,25 +5,25 @@
 - clean: ['~']
 
 - create:
-    - ~/.vim/undo-history
     - ~/.config/nvim
+    - ~/.config/nvim/undodir
     - ~/.config/kitty
     - ~/.config/i3
+    - ~/.config/polybar
 
 - link:
     ~/.tmux.conf: tmux/tmux.conf
-    ~/.vimrc: vim/vimrc
-    ~/.config/nvim/init.vim: vim/vimrc
-    ~/.vim/:
-        path: vim/vim/*
-        glob: true
-    ~/.config/nvim/:
-        path: vim/vim/*
-        glob: true
     ~/.config/kitty/:
         path: kitty/*
         glob: true
-    ~/.config/i3/config: i3/config
+    ~/.config/i3/:
+        path: i3/*
+        glob: true
+    ~/.config/polybar/:
+        path: polybar/*
+    ~/.config/nvim/:
+        path: neovim/*
+        glob: true
     ~/.ideavimrc: idea/ideavimrc
     ~/.bash_prompt: bash/bash_prompt
     ~/.bash_aliases: bash/bash_aliases
