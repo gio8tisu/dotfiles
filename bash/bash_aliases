@@ -8,3 +8,5 @@ alias fvi='fzf | xargs nvim'
 
 alias just="just --unstable --chooser='gum choose'"
 alias j="just "
+
+alias ssh-kitty="kitty +kitten ssh"
