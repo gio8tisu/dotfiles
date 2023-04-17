@@ -20,6 +20,9 @@
 	graph = log --all --graph --decorate --oneline
 [credential]
 	helper = store
+[stash]
+    showStat = true
+    showPatch = true
 [commit]
 	gpgsign = true
 [gpg]
