@@ -5,7 +5,6 @@
 - clean: ['~']
 
 - create:
-    - ~/.vim/undo-history
     - ~/.config/nvim
     - ~/.config/nvim/undodir
     - ~/.config/kitty
@@ -14,14 +13,6 @@
 
 - link:
     ~/.tmux.conf: tmux/tmux.conf
-    ~/.vimrc: vim/vimrc
-    ~/.config/nvim/init.vim: vim/vimrc
-    ~/.vim/:
-        path: vim/vim/*
-        glob: true
-    ~/.config/nvim/:
-        path: vim/vim/*
-        glob: true
     ~/.config/kitty/:
         path: kitty/*
         glob: true
