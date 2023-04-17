@@ -23,7 +23,9 @@
     ~/.config/kitty/:
         path: kitty/*
         glob: true
-    ~/.config/i3/config: i3/config
+    ~/.config/i3/:
+        path: i3/*
+        glob: true
     ~/.ideavimrc: idea/ideavimrc
     ~/.bash_prompt: bash/bash_prompt
     ~/.bash_aliases: bash/bash_aliases
