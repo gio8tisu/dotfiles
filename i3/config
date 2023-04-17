@@ -220,3 +220,10 @@ gaps outer 5px
 workspace 1 gaps inner 0
 workspace 1 gaps outer 0
 smart_gaps inverse_outer
+
+# Escape mode: Useful to send "normal" F1-4 keys (as they are mapped in default mode).
+set $mode_escape Escape mode
+bindsym $mod+Escape mode "$mode_escape"
+mode "$mode_escape" {
+    bindsym $mod+Escape mode "default"
+}
