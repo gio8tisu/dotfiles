@@ -214,3 +214,9 @@ for_window [all] title_window_icon padding 3px
 bindsym $mod+m exec i3-input -F 'mark --toggle %s' -l 1 -P 'Mark: '
 # read 1 character and go to the window with the character
 bindsym $mod+g exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Goto: '
+
+gaps inner 5px
+gaps outer 5px
+workspace 1 gaps inner 0
+workspace 1 gaps outer 0
+smart_gaps inverse_outer
