@@ -9,6 +9,7 @@
     - ~/.config/nvim
     - ~/.config/kitty
     - ~/.config/i3
+    - ~/.config/polybar
 
 - link:
     ~/.tmux.conf: tmux/tmux.conf
@@ -25,6 +26,9 @@
         glob: true
     ~/.config/i3/:
         path: i3/*
+        glob: true
+    ~/.config/polybar/:
+        path: polybar/*
         glob: true
     ~/.ideavimrc: idea/ideavimrc
     ~/.bash_prompt: bash/bash_prompt
