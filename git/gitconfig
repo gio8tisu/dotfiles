@@ -1,6 +1,7 @@
 [user]
 	email = gio8.tisu@gmail.com
 	name = Sergio Garcia Campderrich
+	signingkey = /home/sergio/.ssh/id_rsa.pub
 [diff]
 	tool = nvimdiff
 [difftool "nvimdiff"]
@@ -19,3 +20,7 @@
 	graph = log --all --graph --decorate --oneline
 [credential]
 	helper = store
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
