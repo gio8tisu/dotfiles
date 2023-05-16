@@ -30,3 +30,5 @@
 [pull]
 	rebase = true
 	autoStash = true
+[credential]
+helper = osxkeychain

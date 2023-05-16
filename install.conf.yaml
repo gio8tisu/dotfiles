@@ -7,20 +7,9 @@
 - create:
     - ~/.config/nvim
     - ~/.config/nvim/undodir
-    - ~/.config/kitty
-    - ~/.config/i3
-    - ~/.config/polybar
 
 - link:
     ~/.tmux.conf: tmux/tmux.conf
-    ~/.config/kitty/:
-        path: kitty/*
-        glob: true
-    ~/.config/i3/:
-        path: i3/*
-        glob: true
-    ~/.config/polybar/:
-        path: polybar/*
     ~/.config/nvim/:
         path: neovim/*
         glob: true
