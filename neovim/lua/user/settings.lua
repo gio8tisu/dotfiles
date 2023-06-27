@@ -22,7 +22,7 @@ set.mouse = 'a'
 set.listchars = { eol = "¬" , tab = ">·" , trail = "~" , extends = ">" , precedes = "<" , space = "␣"}
 set.hidden = true
 set.signcolumn = "yes"
-set.scrolloff = 8
+set.scrolloff = 5
 set.sidescrolloff = 8
 set.wrap = false
 set.foldmethod = "expr"
