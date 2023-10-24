@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+unit=$(systemctl --user list-unit-files | awk '{ print $1 }' | grep service | dmenu)
+dmenu <<EOF | xargs -I{} systemctl --user {} "$unit"
+start
+stop
+restart
+EOF

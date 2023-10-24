@@ -41,3 +41,6 @@
         path: clipmenud/clipmenud
     ~/.config/systemd/user/clipmenud.service:
         path: clipmenud/clipmenud.service
+    ~/.local/bin/:
+        path: ./scripts/*
+        glob: true
