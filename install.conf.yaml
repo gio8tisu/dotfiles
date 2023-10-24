@@ -32,3 +32,8 @@
       force: true
     ~/.bash_functions: bash/bash_functions
     ~/.gitconfig: git/gitconfig
+    ~/.config/spotifyd/:
+        path: spotifyd/*
+        glob: true
+    ~/.config/systemd/user/spotifyd.service:
+        path: spotifyd/spotifyd.service
