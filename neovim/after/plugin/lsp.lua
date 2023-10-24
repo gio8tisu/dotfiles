@@ -42,7 +42,7 @@ lsp.on_attach(set_key_bindigs)
 lsp.setup()
 
 vim.diagnostic.config({
-    virtual_text = true,
+    virtual_text = false,
 })
 
 require('rust-tools').setup({

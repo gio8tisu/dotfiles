@@ -7,7 +7,7 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
   use({ 'folke/tokyonight.nvim', as = 'tokyonight' })
-  use( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} )
+  use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } )
   use 'nvim-treesitter/nvim-treesitter-context'
   use 'nvim-treesitter/nvim-treesitter-textobjects'
   use ({
@@ -93,4 +93,14 @@ return require('packer').startup(function(use)
     end
   }
   use { "catppuccin/nvim", as = "catppuccin" }
+  use({
+    'mikesmithgh/kitty-scrollback.nvim',
+    disable = false,
+    opt = true,
+    cmd = { 'KittyScrollbackGenerateKittens', 'KittyScrollbackCheckHealth' },
+    config = function()
+      require('kitty-scrollback').setup(
+      )
+    end,
+  })
 end)

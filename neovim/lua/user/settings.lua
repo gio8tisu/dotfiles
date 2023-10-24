@@ -1,13 +1,15 @@
 local set = vim.opt
 
-set.autoindent = true
+set.softtabstop = 4
+set.shiftwidth = 4
+set.tabstop = 4
+set.expandtab = true
+set.smartindent = true
+set.copyindent = true
+set.preserveindent = true
 set.number = true
 set.relativenumber = true
 set.tabstop = 4
-set.softtabstop = 4
-set.shiftwidth = 4
-set.expandtab = true
-set.smartindent = true
 set.splitbelow = true
 set.splitright = true
 set.ignorecase = true
@@ -22,7 +24,7 @@ set.mouse = 'a'
 set.listchars = { eol = "¬" , tab = ">·" , trail = "~" , extends = ">" , precedes = "<" , space = "␣"}
 set.hidden = true
 set.signcolumn = "yes"
-set.scrolloff = 8
+set.scrolloff = 5
 set.sidescrolloff = 8
 set.wrap = false
 set.foldmethod = "expr"

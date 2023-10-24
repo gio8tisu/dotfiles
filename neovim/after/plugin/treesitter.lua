@@ -7,6 +7,17 @@ require'nvim-treesitter.configs'.setup {
     enable = true,
     additional_vim_regex_highlighting = false,
   },
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "<CR>",
+      scope_incremental = "<CR>",
+      node_decremental = "<BS>",
+    },
+  },
+  indent = {
+    enable = true
+  },
   textobjects = {
     select = {
       enable = true,
@@ -17,6 +28,11 @@ require'nvim-treesitter.configs'.setup {
         ["ac"] = "@class.outer",
         ["ic"] = "@class.inner",
       },
+      selection_modes = {
+        ['@parameter.outer'] = 'v',
+        ['@function.outer'] = 'V',
+        ['@class.outer'] = 'V',
+      },
       include_surrounding_whitespace = true,
     },
     move = {
@@ -24,19 +40,19 @@ require'nvim-treesitter.configs'.setup {
       set_jumps = true,
       goto_next_start = {
         ["]m"] = "@function.outer",
-        ["]]"] = "@class.outer",
+        ["]c"] = "@class.outer",
       },
       goto_next_end = {
         ["]M"] = "@function.outer",
-        ["]["] = "@class.outer",
+        ["]C"] = "@class.outer",
       },
       goto_previous_start = {
         ["[m"] = "@function.outer",
-        ["[["] = "@class.outer",
+        ["[c"] = "@class.outer",
       },
       goto_previous_end = {
         ["[M"] = "@function.outer",
-        ["[]"] = "@class.outer",
+        ["[C"] = "@class.outer",
       },
     },
   },
