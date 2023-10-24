@@ -37,3 +37,7 @@
         glob: true
     ~/.config/systemd/user/spotifyd.service:
         path: spotifyd/spotifyd.service
+    ~/.config/clipmenud:
+        path: clipmenud/clipmenud
+    ~/.config/systemd/user/clipmenud.service:
+        path: clipmenud/clipmenud.service
