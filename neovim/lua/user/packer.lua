@@ -93,4 +93,14 @@ return require('packer').startup(function(use)
     end
   }
   use { "catppuccin/nvim", as = "catppuccin" }
+  use({
+    'mikesmithgh/kitty-scrollback.nvim',
+    disable = false,
+    opt = true,
+    cmd = { 'KittyScrollbackGenerateKittens', 'KittyScrollbackCheckHealth' },
+    config = function()
+      require('kitty-scrollback').setup(
+      )
+    end,
+  })
 end)
