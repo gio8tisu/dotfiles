@@ -1,13 +1,15 @@
 local set = vim.opt
 
-set.autoindent = true
+set.softtabstop = 4
+set.shiftwidth = 4
+set.tabstop = 4
+set.expandtab = true
+set.smartindent = true
+set.copyindent = true
+set.preserveindent = true
 set.number = true
 set.relativenumber = true
 set.tabstop = 4
-set.softtabstop = 4
-set.shiftwidth = 4
-set.expandtab = true
-set.smartindent = true
 set.splitbelow = true
 set.splitright = true
 set.ignorecase = true
