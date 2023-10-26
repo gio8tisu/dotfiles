@@ -15,3 +15,8 @@ To install go packages with dotbot's go plugin:
 ```bash
 $ ./install -p dotbot-golang/go.py -c go.conf.yaml
 ```
+
+To install rust packages with dotbot's rust plugin:
+```bash
+$ ./install -p dotbot-rust/rust.py -c rust.conf.yaml
+```
