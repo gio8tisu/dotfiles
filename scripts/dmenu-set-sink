@@ -1,6 +1,0 @@
-#!/home/sergio/.cache/pypoetry/virtualenvs/default-sink--OPx7Q95-py3.10/bin/python
-import sys
-from default_sink import main
-
-if __name__ == '__main__':
-    sys.exit(main())

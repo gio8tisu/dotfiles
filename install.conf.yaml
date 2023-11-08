@@ -24,10 +24,6 @@
     ~/.config/spotifyd/:
         path: spotifyd/*
         glob: true
-    ~/.config/systemd/user/spotifyd.service:
-        path: spotifyd/spotifyd.service
-    ~/.config/clipmenud:
-        path: clipmenud/clipmenud
     ~/.local/bin/:
         path: ./scripts/*
         glob: true
