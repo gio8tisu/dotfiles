@@ -1,0 +1,17 @@
+#!/usr/bin/sh
+
+change_display() {
+	export DISPLAY=:0
+	sleep 2
+	HDMI=`cat /sys/class/drm/card0-HDMI-A-1/status`
+	if [ "$HDMI" = "connected" ]
+	then
+		/usr/bin/xrandr --output HDMI-A-0 --auto --right-of eDP
+	else
+		/usr/bin/xrandr --output HDMI-A-0 --off
+	fi
+	/usr/bin/xrandr --output eDP --auto
+    /usr/bin/i3-msg restart
+}
+
+change_display &

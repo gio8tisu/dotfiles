@@ -1,0 +1,43 @@
+{
+  "username": "Ferdium",
+  "mail": "internal@ferdium.org",
+  "services": [
+    {
+      "id": 1,
+      "serviceId": "4dd91fca-bf30-4a7a-871e-db8cb32070fb",
+      "name": "Gmail",
+      "recipeId": "gmail",
+      "settings": "{\"recipeId\":\"gmail\",\"isEnabled\":true,\"isHibernationEnabled\":false,\"isWakeUpEnabled\":true,\"isNotificationEnabled\":true,\"isBadgeEnabled\":true,\"isMuted\":false,\"customIcon\":false,\"isDarkModeEnabled\":false,\"spellcheckerLanguage\":null,\"userAgentPref\":null,\"name\":\"Gmail\",\"proxy\":{\"isEnabled\":false,\"host\":\"\",\"port\":\"\",\"user\":\"\",\"password\":\"\"},\"darkReaderSettings\":{\"brightness\":\"\",\"contrast\":\"\",\"sepia\":\"\"},\"order\":0}",
+      "created_at": "2023-10-09 12:21:58",
+      "updated_at": "2023-10-09 12:21:58"
+    },
+    {
+      "id": 2,
+      "serviceId": "3c32e837-1c0a-465b-8efa-334045f12f12",
+      "name": "Pomodoro Tracker",
+      "recipeId": "pomodoro-tracker",
+      "settings": "{\"recipeId\":\"pomodoro-tracker\",\"isEnabled\":true,\"isHibernationEnabled\":false,\"isWakeUpEnabled\":true,\"isNotificationEnabled\":true,\"isBadgeEnabled\":true,\"isMuted\":false,\"customIcon\":false,\"isDarkModeEnabled\":false,\"spellcheckerLanguage\":null,\"userAgentPref\":null,\"name\":\"Pomodoro Tracker\",\"proxy\":{\"isEnabled\":false,\"host\":\"\",\"port\":\"\",\"user\":\"\",\"password\":\"\"},\"darkReaderSettings\":{\"brightness\":\"\",\"contrast\":\"\",\"sepia\":\"\"},\"order\":1}",
+      "created_at": "2023-10-09 12:21:58",
+      "updated_at": "2023-10-09 12:21:58"
+    },
+    {
+      "id": 3,
+      "serviceId": "a94eb44e-c5a7-46f9-b631-516bcbd92fc6",
+      "name": "WhatsApp",
+      "recipeId": "whatsapp",
+      "settings": "{\"recipeId\":\"whatsapp\",\"isEnabled\":true,\"isHibernationEnabled\":false,\"isWakeUpEnabled\":true,\"isNotificationEnabled\":true,\"isBadgeEnabled\":true,\"isMuted\":false,\"customIcon\":false,\"isDarkModeEnabled\":false,\"spellcheckerLanguage\":null,\"userAgentPref\":null,\"name\":\"WhatsApp\",\"isIndirectMessageBadgeEnabled\":false,\"proxy\":{\"isEnabled\":false,\"host\":\"\",\"port\":\"\",\"user\":\"\",\"password\":\"\"},\"darkReaderSettings\":{\"brightness\":\"\",\"contrast\":\"\",\"sepia\":\"\"},\"order\":2}",
+      "created_at": "2023-10-09 12:21:58",
+      "updated_at": "2023-10-09 12:21:58"
+    },
+    {
+      "id": 4,
+      "serviceId": "6549e6f0-0ae6-49d6-bbec-fea8bee675b1",
+      "name": "Slack",
+      "recipeId": "slack",
+      "settings": "{\"recipeId\":\"slack\",\"isEnabled\":true,\"isHibernationEnabled\":false,\"isWakeUpEnabled\":true,\"isNotificationEnabled\":true,\"isBadgeEnabled\":true,\"isMuted\":false,\"customIcon\":false,\"isDarkModeEnabled\":false,\"spellcheckerLanguage\":null,\"userAgentPref\":null,\"name\":\"Slack\",\"team\":\"bcneng\",\"isIndirectMessageBadgeEnabled\":false,\"proxy\":{\"isEnabled\":false,\"host\":\"\",\"port\":\"\",\"user\":\"\",\"password\":\"\"},\"darkReaderSettings\":{\"brightness\":\"\",\"contrast\":\"\",\"sepia\":\"\"},\"order\":3,\"customIconUrl\":\"https://avatars.slack-edge.com/2023-09-22/5938328720963_5ce70570c7ef779a9076_68.png\"}",
+      "created_at": "2023-10-09 12:23:15",
+      "updated_at": "2023-10-26 09:56:57"
+    }
+  ],
+  "workspaces": []
+}
