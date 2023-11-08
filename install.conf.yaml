@@ -10,6 +10,7 @@
     - ~/.config/kitty
     - ~/.config/i3
     - ~/.config/polybar
+    - ~/.config/spotifyd
 
 - link:
     ~/.tmux.conf: tmux/tmux.conf
