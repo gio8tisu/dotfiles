@@ -6,9 +6,9 @@ Then, the config files can be installed using dotbot install script:
 $ ./install
 ```
 
-To install apt packages with dotbot's apt plugin:
+To install brew packages with dotbot's brew plugin:
 ```bash
-$ sudo ./install -p dotbot-apt/apt.py -c packages.conf.yaml
+$ ./install -p dotbot-brew/brew.py -c packages.conf.yaml
 ```
 
 To install go packages with dotbot's go plugin:

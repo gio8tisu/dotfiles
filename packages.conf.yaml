@@ -1,4 +1,3 @@
-- apt:
+- brew:
   - jq
-  - i3
   - fzf
