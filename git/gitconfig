@@ -19,7 +19,7 @@
 [alias]
 	graph = log --all --graph --decorate --oneline
 [credential]
-	helper = store
+	helper = osxkeychain
 [stash]
     showStat = true
     showPatch = true
@@ -30,5 +30,3 @@
 [pull]
 	rebase = true
 	autoStash = true
-[credential]
-helper = osxkeychain
